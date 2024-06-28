@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/portfolio.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio</title>
+</head>
+<body class="bg-dark" data-bs-spy="scroll" data-bs-target="#nav_spy">
+    <!--- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top bg-dark navbar-dark bg-none" id="nav_spy">
+        <div class="container">
+            <a class="navbar-brand d-flex" href="#">
+                <!-- <img src="" alt=""> -->
+                <div class="_logo_circle me-2"></div>
+                <i class="h4 lh-1 align-self-center mb-0">Manuaruzzaman</i>
+            </a>
+            <button class="navbar-toggler _focus-no-border border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offCanvas" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle OffCanvas">
+                <!-- <span class="navbar-toggler-icon _color_seagreen _hover_green"></span> -->
+                <i class="fa-solid fa-bars _color_seagreen _hover_green"></i>
+            </button>
+            <div class="collapse  navbar-collapse justify-content-lg-end" id="navbarNav">
+                <ul class="navbar-nav _nav_items ml-auto d-flex justify-content-lg-between align-items-md-center align-items-end row-gap-4 py-lg-0 py-3">
+                    <li class="">
+                        <a class="" href="#home">Home</a>
+                    </li>
+                    <li class="">
+                        <a class="" href="#about">About</a>
+                    </li>
+                    <li class="">
+                        <a class="" href="#education">Education</a>
+                    </li>
+                    <li class="">
+                        <a class="" href="#projects">Projects</a>
+                    </li>
+                    <li class="">
+                        <a class="" href="#experience">Experience</a>
+                    </li>
+                    <li class="">
+                        <a class="" href="#research">Research</a>
+                    </li>
+                    <li class="">
+                        <a class="" href="#skills">Skills</a>
+                    </li>
+                    <li class="">
+                        <a class="" href="#services">Services</a>
+                    </li>
+                    <li class="">
+                        <a class="" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- OffCanvas -->
+    <div class="container mt-5 pt-5">
+        <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offCanvas">
+            Open Offcanvas Sidebar
+        </button> -->
+          
+        <div class="offcanvas offcanvas-end text-bg-dark" id="offCanvas">
+            <div class="offcanvas-header">
+              <h1 class="offcanvas-title">Heading</h1>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <p>Some text lorem ipsum.</p>
+              <p>Some text lorem ipsum.</p>
+              <p>Some text lorem ipsum.</p>
+              <button class="btn btn-secondary" type="button">A Button</button>
+            </div>
+        </div>
+    </div>
+    <!--Banner-->
+    <div class="container _pt-6" id="home">
+        <div class="row pt-5">
+            <div class="col-lg-7 col-md-8 text-white">
+                <span class="_vertical_middle_inline row-gap-3">
+                    <div class="text-success text-uppercase fs-5 fw-medium fw-bolder _section-title">Hello I'm</div>
+                    <div class="display-4 fw-bold">Md. Manuaruzzaman</div>
+                    <div class="fs-4 fw-medium font-monospace">A <span class="text-success" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Machine Learning Engineer</span></div>
+                    <div class="">
+                        <button type="button" class="btn btn-outline-success px-4 py-2">Know More >></button>
+                    </div>
+                </span>
+            </div>
+            <div class="col-lg-5 col-md-4 bg-dark">
+                <div class="position-relative w-100 d-flex justify-content-center">
+                    <img class="img rounded-top _hero_img" src="{% static 'img/hero-1.png'%}" alt="Hero Image">
+                    <!-- <div class="_overlay no-hover"></div> -->
+                    <div class="_icons_vertical text-white m-4 d-flex flex-column mt-0 position-absolute top-0 end-0" style="z-index: 2; row-gap: 1rem;">
+                        <a href="#" class="text-white border border-success rounded _social_icon"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="text-white border border-success rounded _social_icon"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="text-white border border-success rounded _social_icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="text-white border border-success rounded _social_icon"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Cards-->
+    <div class="bg-black w-100 _section">
+        <div class="container">
+            <div class="row _gx-4p5 gy-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="text-white rounded p-5 bg-dark">
+                        <div class="_vertical_middle_center text-center d-flex _row-gap-4p5">
+                            <div class="display-5 text-success"><i class="fa-solid fa-school"></i></div>
+                            <div class="fs-3 fw-bold lh-1">Smart Work</div>
+                            <p class="card-text text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 pt-md-4">
+                    <div class="text-white rounded p-5 bg-dark">
+                        <div class="_vertical_middle_center text-center d-flex _row-gap-4p5">
+                            <div class="display-5 text-success"><i class="fa-solid fa-gear"></i></div>
+                            <div class="fs-3 fw-bold lh-1">Dedication</div>
+                            <p class="card-text text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="text-white rounded p-5 bg-dark">
+                        <div class="_vertical_middle_center text-center d-flex _row-gap-4p5">
+                            <div class="display-5 text-success"><i class="fa-solid fa-users"></i></div>
+                            <div class="fs-3 fw-bold lh-1">Collaboration</div>
+                            <p class="card-text text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 pt-md-4">
+                    <div class="text-white rounded p-5 bg-dark">
+                        <div class="_vertical_middle_center text-center d-flex _row-gap-4p5">
+                            <div class="display-5 text-success"><i class="fa-solid fa-microchip"></i></div>
+                            <div class="fs-3 fw-bold lh-1">Technology</div>
+                            <p class="card-text text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--About-->
+    <div class="container _section" id="about">
+        <div class="row gy-5">
+            <div class="col-lg-6">
+                <img class="img-fluid rounded" src="{% static 'img/about-1.jpg'%}" alt="About Image">
+            </div>
+            <div class="col-lg-6">
+                <div class="_vertical_middle_inline text-white" style="row-gap: 1rem;">
+                    <div class="text-success text-uppercase fs-5 fw-medium fw-bolder _section-title">About Me</div>
+                    <div class="h2">I Develop Models that Predicts Future</div>
+                    <div class="p text-secondary">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab voluptatum consequuntur quaerat doloremque eius esse veritatis nihil asperiores totam illo, similique, ipsam nesciunt ea id blanditiis dolorem sed fuga magni.</div>
+                    <div class="table-responsive w-100 border-2 border-top border-bottom border-success py-2">
+                        <table class="_about_table table table-dark table-borderless mb-0 fw-bold">
+                            <tr>
+                                <td>Name</td>
+                                <td>Md. Manuaruzzaman</td>
+                                <td>Phone</td>
+                                <td>01500000000</td>
+                            </tr>
+                            <tr>
+                                <td>Name</td>
+                                <td>Md. Manuaruzzaman</td>
+                                <td>Phone</td>
+                                <td>01500000000</td>
+                            </tr>
+                            <tr>
+                                <td>Name</td>
+                                <td>Md. Manuaruzzaman</td>
+                                <td>Phone</td>
+                                <td>01500000000</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!-- <div class="text-secondary mt-3 fs-5">Future Founder & CEO</div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Education-->
+    <div class="bg-black _section" id="education">
+        <div class="container">
+            <div class="row gy-5">
+                <div class="col-lg-6">
+                    <div class="_vertical_middle_inline _text-lg-left text-white row-gap-2">
+                        <div class="text-success text-uppercase fs-5 fw-medium fw-bolder _section-title">Education</div>
+                        <div class="h2 lh-1">My Education</div>
+                        <div class="p text-secondary">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab voluptatum consequuntur quaerat doloremque eius esse veritatis nihil asperiores totam illo, similique, ipsam nesciunt ea id blanditiis dolorem sed fuga magni.</div>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-flex">
+                    <div class=" _border-lg-start  border-secondary d-lg-block pe-4" style="height: 80%;"></div>
+                    <span class="row gy-4 ps-lg-1">
+                        <div class="d-flex">
+                            <div class="pt-1 text-success">
+                                <i class="fa-solid fa-graduation-cap border rounded border-success _p-2p5 fs-3"></i>
+                            </div>
+                            <div class="text-white ps-4 w-100">
+                                <div class="h3">BSc in EEE</div>
+                                <div class="d-flex">
+                                    <div class="h6">Hajee Mohammad Danesh Science & Technology University</div>
+                                    <div class="_p_normal _small-1 _w-100px d-flex justify-content-end">(2017 to 2022)</div>
+                                </div>
+                                <div class="_p_normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus itaque error amet culpa voluptatem voluptatum</div>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <div class="pt-1 text-success">
+                                <i class="fa-solid fa-graduation-cap border rounded border-success _p-2p5 fs-3"></i>
+                            </div>
+                            <div class="text-white ps-4 w-100">
+                                <div class="h3">BSc in EEE</div>
+                                <div class="d-flex">
+                                    <div class="h6">Hajee Mohammad Danesh Science & Technology University</div>
+                                    <div class="_p_normal _small-1 _w-100px d-flex justify-content-end">(2017 to 2022)</div>
+                                </div>
+                                <div class="_p_normal">Lorem, ipsum dolor sit amet consectetur adipisicing elit. ipsa non consequatur? Doloribus.</div>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <div class="pt-1 text-success">
+                                <i class="fa-solid fa-graduation-cap border rounded border-success _p-2p5 fs-3"></i>
+                            </div>
+                            <div class="text-white ps-4 w-100">
+                                <div class="h3">BSc in EEE</div>
+                                <div class="d-flex">
+                                    <div class="h6">Hajee Mohammad Danesh Science & Technology University</div>
+                                    <div class="_p_normal _small-1 d-flex _w-100px justify-content-end">(2017 to 2022)</div>
+                                </div>
+                                <div class="_p_normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</div>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Projects-->
+    <div class="container _section" id="projects">
+        <div class="text-white text-center d-flex flex-column row-gap-2">
+            <div class="text-success text-uppercase fs-5 fw-medium fw-bolder _section-title">Projects</div>
+            <div class="h2 lh-1">Recent Works</div>
+            <div class="p text-secondary ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab voluptatum consequuntur quaerat doloremque eius esse veritatis nihil asperiores totam illo, similique, ipsam nesciunt ea id blanditiis dolorem sed fuga magni.</div>
+        </div>
+        <div>
+            <div class="row py-1 pt-5 gy-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="border border-secondary rounded position-relative overflow-hidden">
+                        <a href="#" class="_overlay rounded" data-bs-toggle="modal" data-bs-target="#myModal"><div></div></a>
+                        <div class="rounded border-0 _project_img" alt="projects"></div> 
+                    </div>
+                    <div class="text-center h5 py-3 text-white">Project 1</div>
+                    <!--Modal-->
+                    <div class="modal fade" id="myModal">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                              <h4 class="modal-title">Modal Heading</h4>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                              Modal body..
+                            </div>
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="border border-secondary rounded position-relative overflow-hidden">
+                        <a href="#" class="_overlay rounded" data-bs-toggle="modal" data-bs-target="#myModal"><div></div></a>
+                        <div class="rounded border-0 _project_img" alt="projects"></div> 
+                    </div>
+                    <div class="text-center h5 py-3 text-white">Project 1</div>
+                    <!--Modal-->
+                    <div class="modal fade" id="myModal">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                              <h4 class="modal-title">Modal Heading</h4>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                              Modal body..
+                            </div>
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="border border-secondary rounded position-relative overflow-hidden">
+                        <a href="#" class="_overlay rounded" data-bs-toggle="modal" data-bs-target="#myModal"><div></div></a>
+                        <div class="rounded border-0 _project_img" alt="projects"></div> 
+                    </div>
+                    <div class="text-center h5 py-3 text-white">Project 1</div>
+                    <!--Modal-->
+                    <div class="modal fade" id="myModal">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                              <h4 class="modal-title">Modal Heading</h4>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                              Modal body..
+                            </div>
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="border border-secondary rounded position-relative overflow-hidden">
+                        <a href="#" class="_overlay rounded" data-bs-toggle="modal" data-bs-target="#myModal"><div></div></a>
+                        <div class="rounded border-0 _project_img" alt="projects"></div> 
+                    </div>
+                    <div class="text-center h5 py-3 text-white">Project 1</div>
+                    <!--Modal-->
+                    <div class="modal fade" id="myModal">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                              <h4 class="modal-title">Modal Heading</h4>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                              Modal body..
+                            </div>
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="border border-secondary rounded position-relative overflow-hidden">
+                        <a href="#" class="_overlay rounded" data-bs-toggle="modal" data-bs-target="#myModal"><div></div></a>
+                        <div class="rounded border-0 _project_img" alt="projects"></div> 
+                    </div>
+                    <div class="text-center h5 py-3 text-white">Project 1</div>
+                    <!--Modal-->
+                    <div class="modal fade" id="myModal">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                              <h4 class="modal-title">Modal Heading</h4>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                              Modal body..
+                            </div>
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="border border-secondary rounded position-relative overflow-hidden">
+                        <a href="#" class="_overlay rounded" data-bs-toggle="modal" data-bs-target="#myModal"><div></div></a>
+                        <div class="rounded border-0 _project_img" alt="projects"></div> 
+                    </div>
+                    <div class="text-center h5 py-3 text-white">Project 1</div>
+                    <!--Modal-->
+                    <div class="modal fade" id="myModal">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                              <h4 class="modal-title">Modal Heading</h4>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                              Modal body..
+                            </div>
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Experience-->
+    <div class="bg-black _section" id="experience">
+        <div class="container">
+            <div class="row gy-5">
+                <div class="col-lg-6">
+                    <span class="_vertical_middle_inline _text-lg-left text-white d-flex flex-column row-gap-2">
+                        <div class="text-success text-uppercase fs-5 fw-medium fw-bolder _section-title">Experience</div>
+                        <div class="h2 lh-1">My Experience</div>
+                        <div class="p text-secondary">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab voluptatum consequuntur quaerat doloremque eius esse veritatis nihil asperiores totam illo, similique, ipsam nesciunt ea id blanditiis dolorem sed fuga magni.</div>
+                    </span>
+                </div>
+                <div class="col-lg-6 d-flex">
+                    <div class=" _border-lg-start  border-secondary d-lg-block pe-4" style="height: 80%;"></div>
+                    <span class="row gy-4 ps-lg-1">
+                        <div class="d-flex">
+                            <div class="pt-1 text-success">
+                                <i class="fa-solid fa-briefcase border rounded border-success _p-2p5 fs-3"></i>
+                            </div>
+                            <div class="text-white ps-4 w-100">
+                                <div class="h3">Experience 1</div>
+                                <div class="d-flex">
+                                    <div class="h6">Institute 1</div>
+                                    <div class="_p_normal _small-1 _w-100px d-flex justify-content-end">(2017 to 2022)</div>
+                                </div>
+                                <div class="_p_normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus itaque error amet culpa voluptatem voluptatum</div>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <div class="pt-1 text-success">
+                                <i class="fa-solid fa-briefcase border rounded border-success _p-2p5 fs-3"></i>
+                            </div>
+                            <div class="text-white ps-4 w-100">
+                                <div class="h3">Experience 2</div>
+                                <div class="d-flex">
+                                    <div class="h6">Institute 2</div>
+                                    <div class="_p_normal _small-1 _w-100px d-flex justify-content-end">(2017 to 2022)</div>
+                                </div>
+                                <div class="_p_normal">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <div class="pt-1 text-success">
+                                <i class="fa-solid fa-briefcase border rounded border-success _p-2p5 fs-3"></i>
+                            </div>
+                            <div class="text-white ps-4 w-100">
+                                <div class="h3">Experience 3</div>
+                                <div class="d-flex">
+                                    <div class="h6">Institute 3</div>
+                                    <div class="_p_normal _small-1 d-flex _w-100px justify-content-end">(2017 to 2022)</div>
+                                </div>
+                                <div class="_p_normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</div>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Research-->
+    <div class="container _section" id="research">
+        <div class="text-white text-center d-flex flex-column row-gap-2">
+            <div class="text-success text-uppercase fs-5 fw-medium fw-bolder _section-title">Research</div>
+            <div class="h2 lh-1">My Recent Works</div>
+            <div class="_p_normal">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab voluptatum consequuntur quaerat doloremque eius esse veritatis nihil asperiores totam illo, similique, ipsam nesciunt ea id blanditiis dolorem sed fuga magni.</div>
+        </div>
+        <div>
+        <div class="row py-1 pt-5 gy-4 gx-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="">
+                    <div class="p-4 _research-card border rounded border-dark _bg-primary-subtle text-center  text-white d-flex flex-column row-gap-2">
+                        <div class="display-6 text-success"><i class="fa-solid fa-people-arrows"></i></div>
+                        <div class="fs-3 fw-bold lh-1">Collective Collaboration</div>
+                        <div class="_p_normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat ducimus distinctio quas incidunt.</div>
+                        <div class="fw-bold p _text-silver">2022 to 2023</div>
+                    </div>
+                </div>
+            </div>                
+            <div class="col-lg-4 col-md-6">
+                <div class="">
+                    <div class="p-4 _research-card border rounded border-dark _bg-primary-subtle text-center  text-white d-flex flex-column row-gap-2">
+                        <div class="display-6 text-success"><i class="fa-solid fa-calculator"></i></div>
+                        <div class="fs-3 fw-bold lh-1">Geobag Counting</div>
+                        <div class="_p_normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat ducimus distinctio quas incidunt.</div>
+                        <div class="fw-bold p _text-silver">2022 to 2023</div>
+                    </div>
+                </div>
+            </div> 
+            <div class="col-lg-4 col-md-6">
+                <div class="">
+                    <div class="p-4 _research-card border rounded border-dark _bg-primary-subtle text-center  text-white d-flex flex-column row-gap-2">
+                        <div class="display-6 text-success"><i class="fa-solid fa-people-group"></i></div>
+                        <div class="fs-3 fw-bold lh-1">Crowd-sourcing Behavior</div>
+                        <div class="_p_normal">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita obcaecati ut voluptatum fugiat, temporibus accusantium sit, quasi accusamus facilis omnis consectetur, optio ea natus ad cupiditate perferendis ullam quod necessitatibus?</div>
+                        <div class="fw-bold p _text-silver">2022 to 2023</div>
+                    </div>
+                </div>
+            </div> 
+            <div class="col-lg-4 col-md-6">
+                <div class="">
+                    <div class="p-4 _research-card border rounded border-dark _bg-primary-subtle text-center  text-white d-flex flex-column row-gap-2">
+                        <div class="display-6 text-success"><i class="fa-solid fa-clipboard-user"></i></div>
+                        <div class="fs-3 fw-bold lh-1">Employee Attendance System</div>
+                        <div class="_p_normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat ducimus distinctio quas incidunt.</div>
+                        <div class="fw-bold p _text-silver">2022 to 2023</div>
+                    </div>
+                </div>
+            </div> 
+            <div class="col-lg-4 col-md-6">
+                <div class="">
+                    <div class="p-4 _research-card border rounded border-dark _bg-primary-subtle text-center  text-white d-flex flex-column row-gap-2">
+                        <div class="display-6 text-success"><i class="fa-solid fa-city"></i></div>
+                        <div class="fs-3 fw-bold lh-1">Smart City Urban</div>
+                        <div class="_p_normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, in debitis corrupti quaerat, reiciendis vitae fuga ea sit deleniti commodi repellendus animi! Beatae ullam nisi sit vitae repellendus unde natus?</div>
+                        <div class="fw-bold p _text-silver">2022 to 2023</div>
+                    </div>
+                </div>
+            </div> 
+            <div class="col-lg-4 col-md-6">
+                <div class="">
+                    <div class="p-4 _research-card border rounded border-dark _bg-primary-subtle text-center  text-white d-flex flex-column row-gap-2">
+                        <div class="display-6 text-success"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <div class="fs-3 fw-bold lh-1">Exam Proctoring System</div>
+                        <div class="_p_normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat ducimus distinctio quas incidunt.</div>
+                        <div class="fw-bold p _text-silver">2022 to 2023</div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        </div>
+    </div>
+    <!--Facts-->
+    <div class="bg-black _section">
+        <div class="container">
+            <div class="row gy-4 justify-content-between">
+                <div class="col-lg-5">
+                    <div class="_vertical_middle_inline _text-lg-left text-white pe-lg-4 d-flex flex-column row-gap-2">
+                        <div class="text-success text-uppercase fs-5 fw-medium fw-bolder _section-title">Facts</div>
+                        <div class="h2 lh-1">I Develop Models that Predicts Future</div>
+                        <div class="_p_normal">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab voluptatum consequuntur quaerat doloremque eius esse veritatis nihil asperiores totam illo, similique, ipsam nesciunt ea id blanditiis dolorem sed fuga magni.</div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="row gy-4 text-white pt-lg-0 pt-4">
+                        <div class="col-sm-6">
+                            <div class=" _vertical_middle_center _fact-card rounded border border-secondary">
+                                <div class="">
+                                    <div class="d-flex justify-content-center">                                        
+                                        <div class="text-success fw-bold _fact-number">15</div>
+                                        <div class="pt-3 ps-3 w-50">Years of Experience</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class=" _vertical_middle_center _fact-card rounded border border-secondary">
+                                <div class="">
+                                    <div class="d-flex justify-content-center">                                        
+                                        <div class="text-success fw-bold _fact-number">3k</div>
+                                        <div class="pt-3 ps-3 w-50">Total Clients</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class=" _vertical_middle_center _fact-card rounded border border-secondary">
+                                <div class="">
+                                    <div class="d-flex justify-content-center">                                        
+                                        <div class="text-success fw-bold _fact-number">4k</div>
+                                        <div class="pt-3 ps-3 w-50">Projects Completed</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class=" _vertical_middle_center _fact-card rounded border border-secondary">
+                                <div class="">
+                                    <div class="d-flex justify-content-center">                                        
+                                        <div class="text-success fw-bold _fact-number">40</div>
+                                        <div class="pt-3 ps-3 w-50">Digital Products</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!--Skills-->
+    <div class="container _section" id="skills">
+        <div class="text-white text-center d-flex flex-column row-gap-2">
+            <div class="text-success text-uppercase fs-5 fw-medium fw-bolder _section-title">Skills</div>
+            <div class="h2 lh-1">Growing Over Times</div>
+            <div class="_p_normal">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab voluptatum consequuntur quaerat doloremque eius esse veritatis nihil asperiores totam illo, similique, ipsam nesciunt ea id blanditiis dolorem sed fuga magni.</div>
+        </div>
+        <div>
+            <div class="d-flex py-1 pt-5 justify-content-center _skills row-gap-3">
+                <div class="_skill-card">
+                    <div class="p-4 border border-secondary rounded bg-dark text-center  text-white">
+                        <div class="pt-1 display-5"><i class="fa-solid fa-code"></i></div>
+                        <div class="pt-2 text-success fs-2 fw-bolder">35%</div>
+                    </div>
+                    <div class="text-white text-center pt-2 fw-bolder">Problem Solving</div>
+                </div>
+                <div class="_skill-card">
+                    <div class="p-4 border border-secondary rounded bg-dark text-center  text-white">
+                        <div class="pt-1 display-5"><i class="fa-brands fa-html5"></i></div>
+                        <div class="pt-2 text-success fs-2 fw-bolder">55%</div>
+                    </div>
+                    <div class="text-white text-center pt-2 fw-bolder">HTML</div>
+                </div>
+                <div class="_skill-card">
+                    <div class="p-4 border border-secondary rounded bg-dark text-center  text-white">
+                        <div class="pt-1 display-5"><i class="fa-brands fa-css3-alt"></i></div>
+                        <div class="pt-2 text-success fs-2 fw-bolder">45%</div>
+                    </div>
+                    <div class="text-white text-center pt-2 fw-bolder">CSS</div>
+                </div>
+                <div class="_skill-card">
+                    <div class="p-4 border border-secondary rounded bg-dark text-center  text-white">
+                        <div class="pt-1 display-5"><i class="fa-brands fa-bootstrap"></i></div>
+                        <div class="pt-2 text-success fs-2 fw-bolder">50%</div>
+                    </div>
+                    <div class="text-white text-center pt-2 fw-bolder">BootStrap</div>
+                </div>
+                <div class="_skill-card">
+                    <div class="p-4 border border-secondary rounded bg-dark text-center  text-white">
+                        <div class="pt-1 display-5"><i class="fa-brands fa-square-js"></i></div>
+                        <div class="pt-2 text-success fs-2 fw-bolder">35%</div>
+                    </div>
+                    <div class="text-white text-center pt-2 fw-bolder">JavaScript</div>
+                </div>
+                <div class="_skill-card">
+                    <div class="p-4 border border-secondary rounded bg-dark text-center  text-white">
+                        <div class="pt-1 display-5"><i class="fa-brands fa-python"></i></div>
+                        <div class="pt-2 text-success fs-2 fw-bolder">75%</div>
+                    </div>
+                    <div class="text-white text-center pt-2 fw-bolder">Python</div>
+                </div>
+                <div class="_skill-card">
+                    <div class="p-4 border border-secondary rounded bg-dark text-center  text-white">
+                        <div class="pt-1 display-5"><i class="fa-solid fa-database"></i></div>
+                        <div class="pt-2 text-success fs-2 fw-bolder">25%</div>
+                    </div>
+                    <div class="text-white text-center pt-2 fw-bolder">MySQL</div>
+                </div>
+            </div>  
+        </div>
+    </div>
+    <!--Testimonials-->
+    <div class="bg-black _section">
+        <div class="container">
+            <div class="row gy-5 justify-content-between">
+                <div class="col-lg-5">
+                    <div class="text-white pe-lg-5 d-flex flex-column _text-lg-left row-gap-2">
+                        <div class="text-success text-uppercase fs-5 fw-medium fw-bolder _section-title">Testimonials</div>
+                        <div class="h2 lh-1">What People Say</div>
+                        <div class="_p_normal">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab voluptatum consequuntur quaerat doloremque eius esse veritatis nihil asperiores totam illo, similique, ipsam nesciunt ea id blanditiis dolorem sed fuga magni.</div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <!-- Carousel -->
+                    <div id="demo" class="carousel slide" data-bs-ride="false">
+                        <!-- The slideshow/carousel -->
+                        <div class="carousel-inner justify-content-center align-items-center text-center">
+                            <div class="carousel-item active">
+                                <div class="d-block w-100 border border-secondary border-end-0 rounded-4 p-4">
+                                    <div class="d-flex pb-3">
+                                        <img class="img-fluid rounded" style="height: 75px; width: 75px;" src="{% static 'img/about-1.jpg'%}" alt="client-1">
+                                        <div class="text-start ps-4">
+                                            <h4 class="text-white m-0">Client Name</h4>
+                                            <p class="small text-secondary m-0">Designation</p>
+                                            <p class="text-success m-0">Company Name</p>
+                                        </div>
+                                    </div>
+                                    <div class="_justify_text _text-silver pt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque suscipit, odio dolores molestiae dolorum magnam mollitia harum ut reiciendis porro ad numquam nisi maiores facere, eveniet pariatur neque sunt distinctio?</div>
+                                    <div class="text-start _text-silver pt-5 pb-2">Project Name</div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="d-block w-100 border border-secondary border-end-0 rounded-4 p-4">
+                                    <div class="d-flex pb-3">
+                                        <img class="img-fluid rounded" style="height: 75px; width: 75px;" src="{% static 'img/about-1.jpg'%}" alt="client-1">
+                                        <div class="text-start ps-4">
+                                            <h4 class="text-white m-0">Client Name</h4>
+                                            <p class="small text-secondary m-0">Designation</p>
+                                            <p class="text-success m-0">Company Name</p>
+                                        </div>
+                                    </div>
+                                    <div class="_justify_text _text-silver pt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque suscipit, odio dolores molestiae dolorum magnam mollitia harum ut reiciendis porro ad numquam nisi maiores facere, eveniet pariatur neque sunt distinctio?</div>
+                                    <div class="text-start _text-silver pt-5 pb-2">Project Name</div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="d-block w-100 border border-secondary border-end-0 rounded-4 p-4">
+                                    <div class="d-flex pb-3">
+                                        <img class="img-fluid rounded" style="height: 75px; width: 75px;" src="{% static 'img/about-1.jpg'%}" alt="client-1">
+                                        <div class="text-start ps-4">
+                                            <h4 class="text-white m-0">Client Name</h4>
+                                            <p class="small text-secondary m-0">Designation</p>
+                                            <p class="text-success m-0">Company Name</p>
+                                        </div>
+                                    </div>
+                                    <div class="_justify_text _text-silver pt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque suscipit, odio dolores molestiae dolorum magnam mollitia harum ut reiciendis porro ad numquam nisi maiores facere, eveniet pariatur neque sunt distinctio?</div>
+                                    <div class="text-start _text-silver pt-5 pb-2">Project Name</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Left and right controls/icons -->
+                    <div class="pt-4">
+                        <button class="bg-black border border-dark rounded px-3 py-2" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                            <span class="text-secondary"><i class="fa-solid fa-chevron-left"></i></span>
+                        </button>
+                        <button class="bg-black border border-dark rounded px-3 py-2" type="button" data-bs-target="#demo" data-bs-slide="next">
+                            <span class="text-secondary"><i class="fa-solid fa-chevron-right"></i></span>
+                        </button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!--Services-->
+    <div class="container _section" id="services">
+        <div class="text-white text-center d-flex flex-column row-gap-2">
+            <div class="text-success text-uppercase fs-5 fw-medium fw-bolder _section-title">Services</div>
+            <div class="h2 lh-1">What I Provide</div>
+            <div class="_p_normal">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab voluptatum consequuntur quaerat doloremque eius esse veritatis nihil asperiores totam illo, similique, ipsam nesciunt ea id blanditiis dolorem sed fuga magni.</div>
+        </div>
+        <div>
+            <div class="row py-1 pt-5 gy-5 gx-5">
+                <div class="col-md-6">
+                    <div class="">
+                        <div class="d-flex flex-lg-row flex-column p-4 rounded border _text-lg-left _research-card border-secondary _bg-primary-subtle text-center text-white h-50 row-gap-3">
+                            <div class="display-5 text-success"><i class="fa-solid fa-earth-asia"></i></div>
+                            <div class="ps-lg-5 _text-lg-left">
+                                <div class="h3">Web Development</div>
+                                <div class="_p_normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat ducimus distinctio quas incidunt. Enim quam quaerat earum, possimus distinctio veritatis hic fuga magnam nemo, quas quisquam, nostrum voluptas eveniet eum!</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="">
+                        <div class="d-flex flex-lg-row flex-column p-4 rounded border _text-lg-left _research-card border-secondary _bg-primary-subtle text-center text-white h-50 row-gap-3">
+                            <div class="display-5 text-success"><i class="fa-solid fa-laptop-code"></i></div>
+                            <div class="ps-lg-5 _text-lg-left">
+                                <div class="h3">Machine Learning</div>
+                                <div class="_p_normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat ducimus distinctio quas incidunt. Enim quam quaerat earum, possimus distinctio veritatis hic fuga magnam nemo, quas quisquam, nostrum voluptas eveniet eum!</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="">
+                        <div class="d-flex flex-lg-row flex-column p-4 rounded border _text-lg-left _research-card border-secondary _bg-primary-subtle text-center text-white h-50 row-gap-3">
+                            <div class="display-5 text-success"><i class="fa-solid fa-language"></i></div>
+                            <div class="ps-lg-5 _text-lg-left">
+                                <div class="h3">Natural Language Processing</div>
+                                <div class="_p_normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat ducimus distinctio quas incidunt. Enim quam quaerat earum, possimus distinctio veritatis hic fuga magnam nemo, quas quisquam, nostrum voluptas eveniet eum!</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="">
+                        <div class="d-flex flex-lg-row flex-column p-4 rounded border _text-lg-left _research-card border-secondary _bg-primary-subtle text-center text-white h-50 row-gap-3">
+                            <div class="display-5 text-success"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                            <div class="ps-lg-5 _text-lg-left">
+                                <div class="h3">Data Analysis</div>
+                                <div class="_p_normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat ducimus distinctio quas incidunt. Enim quam quaerat earum, possimus distinctio veritatis hic fuga magnam nemo, quas quisquam, nostrum voluptas eveniet eum!</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Contact-->
+    <div class="bg-black _section" id="contact">
+        <div class="container">
+            <div class="row row-gap-3">
+                <div class="col-lg-5 pe-lg-5">
+                    <div class="text-white pe-5">
+                        <div class="text-success text-uppercase fs-5 fw-medium fw-bolder _section-title">Contact Me</div>
+                        <div class="h2">Discuss Your Project</div>
+                        <div class="pt-4 pt-lg-5 d-flex">
+                            <div class="text-white bg-success rounded-circle _vertical_middle_center _hw-40px">
+                                <i class="fa-solid fa-location-crosshairs"></i>
+                            </div>
+                            <div class="_vertical_middle_center ps-3">
+                                693, West Shewrapara, Mirpur - 1216
+                            </div>
+                        </div>
+                        <div class="pt-3 d-flex">
+                            <div class="text-white bg-success rounded-circle _vertical_middle_center _hw-40px">
+                                <i class="fa-solid fa-location-crosshairs"></i>
+                            </div>
+                            <div class="_vertical_middle_center ps-3">
+                                693, West Shewrapara, Mirpur - 1216
+                            </div>
+                        </div>
+                        <div class="pt-3 d-flex">
+                            <div class="text-white bg-success rounded-circle _vertical_middle_center _hw-40px">
+                                <i class="fa-solid fa-location-crosshairs"></i>
+                            </div>
+                            <div class="_vertical_middle_center ps-3">
+                                693, West Shewrapara, Mirpur - 1216
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 ps-lg-4">
+                    <div class="">
+                        <form class="">
+                            <div class="row gy-4 _gx-4p5">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control rounded rounded-3 _py-2p5 _bg-primary-subtle border-secondary text-secondary" placeholder="Your Name" name="name">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control  rounded rounded-3 _py-2p5  _bg-primary-subtle border-secondary text-secondary" placeholder="Your Email" name="email">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control rounded rounded-3 _py-2p5  _bg-primary-subtle border-secondary text-secondary" placeholder="Phone Number" name="number">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control rounded rounded-3 _py-2p5  _bg-primary-subtle border-secondary text-secondary" placeholder="Your Subject" name="subject">
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control rounded rounded-3 _py-2p5 _bg-primary-subtle border-secondary text-secondary" rows="5" placeholder="Message" name="message"></textarea>
+                                </div>
+                                <div>
+                                    <button class="btn btn-outline-success px-4 py-2">Send Message</button>
+                                </div>
+                            </div>
+                          </form> 
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!--Footer-->
+    <div class="container _section">
+        <div class="row justify-content-lg-between gy-5">
+            <div class="col-xl-4 col-lg-5 col-12">
+                <div>
+                    <div class="d-flex">
+                        <div class="_logo_circle"></div>
+                        <i class="h3 text-white _vertical_middle_center mb-0 ps-2">Md. Manuaruzzaman</i>
+                    </div>
+                    <div class="_text-silver _pt-4p5">
+                        <span class="small text-secondary">All rights reserved by</span>
+                        <span class="fw-bolder">Md. Manuaruzzaman</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-12 d-flex justify-content-lg-end">
+                <div class="_mw-300px">
+                    <div class="h3 text-white">Newsletter</div>
+                    <form action="" class="pt-3 position-relative">
+                        <input type="email" class="form-control rounded rounded-3 _py-2p5  _bg-primary-subtle border-secondary text-secondary" placeholder="Your Email" name="email">
+                        <i class="fa-regular fa-envelope text-secondary _newsletter_envelop position-absolute top-50 _end-5"></i>
+                    </form>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-3 col-12 d-flex justify-content-lg-end">
+                <div class="_mw-215px _follow">
+                    <div class="h3 text-white">Follow Me</div>
+                    <div class="pt-3 d-flex" style="column-gap: 20px;">
+                        <a href="#" class="text-success border border-success rounded _social_icon"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="text-success border border-success rounded _social_icon"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="text-success border border-success rounded _social_icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="text-success border border-success rounded _social_icon"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Back to top-->
+    <div>
+        <button type="button" class="border border-success text-success p-0 rounded position-fixed _back_to_top"><i class="fa-solid fa-angles-up"></i></button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
+
+<!-- add scrollSpy later -->
