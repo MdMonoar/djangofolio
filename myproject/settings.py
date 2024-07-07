@@ -78,10 +78,47 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+# configuring database directly in settings (not recommended)
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'delete_anytime',
+#         'USER': 'root',
+#         'PASSWORD': '',
+#         'HOST': '127.0.0.1',
+#         'PORT': '3306'
+#     }
+# }
+
+
+
+# configuring database using django-environ
+import environ
+env = environ.Env()
+env.read_env(os.path.join(BASE_DIR,'.env')) # specifying the path to the .env file
+
+print('DB_NAME:', env('DB_NAME', default=''))
+print('DB_USER:', env('DB_USER', default=''))
+print('DB_PASSWORD:', env('DB_PASSWORD', default=''))
+print('DB_HOST:', env('DB_HOST', default=''))
+print('DB_PORT:', env('DB_PORT', default=''))
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': env('DB_NAME'),
+        'USER': env('DB_USER'),
+        'PASSWORD': env('DB_PASSWORD'),
+        'HOST': env('DB_HOST'),
+        'PORT': env('DB_PORT')
     }
 }
 
