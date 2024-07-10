@@ -101,27 +101,110 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 
 
 # configuring database using django-environ
-import environ
-env = environ.Env()
-env.read_env(os.path.join(BASE_DIR,'.env')) # specifying the path to the .env file
+# import environ
+# env = environ.Env()
+# env.read_env(os.path.join(BASE_DIR,'.env')) # specifying the path to the .env file
 
-print('DB_NAME:', env('DB_NAME', default=''))
-print('DB_USER:', env('DB_USER', default=''))
-print('DB_PASSWORD:', env('DB_PASSWORD', default=''))
-print('DB_HOST:', env('DB_HOST', default=''))
-print('DB_PORT:', env('DB_PORT', default=''))
+# print('DB_NAME:', env('DB_NAME', default=''))
+# print('DB_USER:', env('DB_USER', default=''))
+# print('DB_PASSWORD:', env('DB_PASSWORD', default=''))
+# print('DB_HOST:', env('DB_HOST', default=''))
+# print('DB_PORT:', env('DB_PORT', default=''))
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': env('DB_NAME'),
+#         'USER': env('DB_USER'),
+#         'PASSWORD': env('DB_PASSWORD'),
+#         'HOST': env('DB_HOST'),
+#         'PORT': env('DB_PORT')
+#     }
+# }
+
+
+# using os only
+import os
+
+# def get_env_var(var_name, default_value=None):
+#   """
+#   This function retrieves an environment variable and returns its value.
+
+#   Args:
+#       variable_name (str): The name of the environment variable to retrieve.
+#       default_value (str, optional): A default value to return if the variable is not found. Defaults to None.
+
+#   Returns:
+#       str: The value of the environment variable or the default value if not found.
+#   """
+#   try:
+#     return os.getenv(var_name)
+#   except KeyError:
+#     return default_value
+
+
+# with open('.env', 'r') as env_file:
+#   file = env_file.read()
+#   print('>>>>>>>>> env type: ',type(file))
+#   print('>>>>>>>>> env file:')
+#   print(file)
+
+# print('\nstring modification: \n')
+# file_list = list(file.split('\n'))
+# print(file_list)
+# file_dict = dict()
+# for i in file_list:
+# #   print(i.split('=')[0])
+#   file_dict[i.split('=')[0]] = i.split('=')[1].strip('\' \"')
+# print(file_dict)
+
+
+class GetEnv_():
+    def __init__(self):
+       self.env_dict = None
+    
+    def read_env(self, file_path, file_name):
+        try:
+            with open(os.path.join(BASE_DIR,'.env'), 'r') as f:
+               file = f.read().split('\n')
+            env_dict = dict()
+            for i in file:
+                env_dict[i.split('=')[0]] = i.split('=')[1].strip('\' \"')
+            self.env_dict = env_dict
+            print('>>>>>>>>>\n', env_dict)
+            return(self)
+        except Exception as e:
+          print(e)
+
+    def get_var_(self, var_name, default_value=None):
+       try:
+          return(self.env_dict[var_name])
+       except KeyError:
+          return(default_value)
+
+env = GetEnv_().read_env(BASE_DIR, '.env')
+
+
+# the following block is for debugging puposes
+
+# print(env.get_var_('DB_NAME'))
+print('>>>>>>> Environment Details:')  
+print('DB_NAME:', env.get_var_('DB_NAME', default_value=''))
+print('DB_USER:', env.get_var_('DB_USER', default_value=''))
+print('DB_PASSWORD:', env.get_var_('DB_PASSWORD', default_value=''))
+print('DB_HOST:', env.get_var_('DB_HOST', default_value=''))
+print('DB_PORT:', env.get_var_('DB_PORT', default_value=''))
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': env('DB_NAME'),
-        'USER': env('DB_USER'),
-        'PASSWORD': env('DB_PASSWORD'),
-        'HOST': env('DB_HOST'),
-        'PORT': env('DB_PORT')
+        'NAME': env.get_var_('DB_NAME'),
+        'USER': env.get_var_('DB_USER'),
+        'PASSWORD': env.get_var_('DB_PASSWORD'),
+        'HOST': env.get_var_('DB_HOST'),
+        'PORT': env.get_var_('DB_PORT')
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

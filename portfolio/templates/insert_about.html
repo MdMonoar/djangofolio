@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+</head>
+    <body>
+        <div>
+            <form action="{% url 'about_info'%}" method="POST" style="display: flex; row-gap: 10px; flex-direction: column;">
+                {% csrf_token %}
+                <div>
+                    <!-- <label for="Name">Input your name: </label> -->
+                    <input type="text" placeholder="Name" name="fullname">
+                </div>
+                <div>
+                    <input type="email" placeholder="Email" name="email">
+                </div>
+                <div>
+                    <input type="text" placeholder="Birth Date" name="dob">
+                </div>
+                <div>
+                    <input type="text" placeholder="Phone Number" name="phone">
+                </div>
+                <div>
+                    <input type="text" placeholder="Nationality" name="nationality">
+                </div>
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
